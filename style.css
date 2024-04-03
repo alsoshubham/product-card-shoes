@@ -5,17 +5,18 @@
     vertical-align: baseline;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 
 }
 /*This is for styling of entire container*/
 .container {
-    min-height: 918px;
-    max-width: 616px;
-    background-color: var(--cream);
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
 }
 
 section{
@@ -25,30 +26,105 @@ section{
 
 .card-box {
     margin: 1em 2em;
-    max-width: 700px;
+    height: 550px;
+    width: 900px;
     background-color: white;
     border-radius: 1.5em;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 div{
     display: block;
     unicode-bidi: isolate;
 }
-
+/*Styling for card image section*/
 .image {
-    max-width: 100%;
- 
+    width: 376px;
+    height: 514px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
+    object-fit: cover;
     overflow-clip-margin: content-box;
-    overflow: clip;
+   
+}
+/* styling for card description*/
+.more-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height:60px;
+    object-fit: cover;
+}
+#img6 img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+}
+#img7 img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+}
+#img8 img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
 }
 #Reviews img{
     height: 10px;
     width: 10px;
 }
-.desktop-image{
+.size-box{
+    width: 376px;
+    height: 120px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    gap: 3px;
+}
+#box{
+    background-color: white;
+    border: 1px solid black;
+    padding: 1em 0;
+    border-radius: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    outline: none;
+    cursor: pointer;
+}
+/*styling for buttons*/
+.Add-bag {
     display: block;
-    height: 100%;
-    width: 900px;
-    border-radius: 1.5em 0 0 1.5em;;
+    margin: 0.5em 0 0.5em 0;
+    background-color: black;
+    width: 100%;
+    padding: 1em 0;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+.favourites{
+    display: block;
+    margin: 0.5em 0 0.5em 0;
+    background-color: white;
+    width: 100%;
+    padding: 1em 0;
+    color: black;
+    border: 0.5px solid black;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+.favourite-button{
+    height: 15px;
+    width: 15px;
+
 }
